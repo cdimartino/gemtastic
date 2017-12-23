@@ -29,7 +29,7 @@ source 'https://rubygems.org'
 #~#
 #~# Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably
 #~#
-#~# Homepage:      http://bundler.io
+#~# Homepage:      https://bundler.io/
 #~# Source:        http://github.com/bundler/bundler/
 #~# Documentation: http://bundler.io
 #~#
@@ -57,7 +57,7 @@ gem 'rspec' # Rspec gem
 #~#
 #~# Ruby on Rails is a full-stack web framework optimized for programmer happiness and sustainable productivity. It encourages beautiful code by favoring convention over configuration.
 #~#
-#~# Homepage:      http://www.rubyonrails.org
+#~# Homepage:      http://rubyonrails.org
 #~# Source:        http://github.com/rails/rails
 #~# Documentation: http://api.rubyonrails.org
 #~#
@@ -132,7 +132,7 @@ module Gemtastic
       end
 
       it "should raise an exception when given a bad string" do
-        expect{ Gem.from_s bad_string }.to raise_error
+        expect{ Gem.from_s bad_string }.to raise_error Exception, "Bad string passed - not gem format"
       end
     end
 
@@ -163,7 +163,7 @@ module Gemtastic
       end
 
       it "should raise an exception when given a bad string" do
-        expect{ Source.from_s bad_string }.to raise_error
+        expect{ Source.from_s bad_string }.to raise_error Exception, "Bad string passed - not source format"
       end
     end
   end
@@ -192,7 +192,7 @@ module Gemtastic
 #~#
 #~# Bundler manages an application's dependencies through its entire life, across many machines, systematically and repeatably
 #~#
-#~# Homepage:      http://bundler.io
+#~# Homepage:      https://bundler.io/
 #~# Source:        http://github.com/bundler/bundler/
 #~# Documentation: http://bundler.io
 #~#
